@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>線上訂購｜植數密碼 Botanumeric</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* 訂購表單專用獨立樣式 */
+    .order-container {
+      max-width: 650px;
+      margin: 2rem auto;
+      padding: 2.5rem;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #2C3E50;
+    }
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #dcdfe6;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      transition: border-color 0.2s ease;
+    }
+    .form-group input:focus, 
+    .form-group select:focus, 
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #27AE60;
+    }
+    /* 匯款帳號資訊卡 */
+    .bank-info-box {
+      display: none;
+      background-color: #f4f9f5;
+      border: 1px dashed #27AE60;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    .bank-info-box strong {
+      color: #27AE60;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 0.9rem;
+      background-color: #27AE60;
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #219150;
+    }
+    /* 送出成功提示畫面 */
+    .success-card {
+      display: none;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .success-card h2 {
+      color: #27AE60;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .order-summary-box {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      border-left: 4px solid #27AE60;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頁頭與導覽列 -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">植數密碼 Botanumeric</a>
+      <nav>
+        <button class="mobile-nav-toggle" aria-label="開啟選單" aria-expanded="false" id="menu-toggle">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="quiz.html">天賦測驗</a></li>
+          <li><a href="curriculum.html">天賦課程</a></li>
+          <li><a href="products.html" class="active">香氛系列</a></li>
+          <li><a href="about.html">關於我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="order-container">
+      
+      <!-- 1. 訂購表單區塊 -->
+      <form id="order-form">
+        <h1 class="section-title" style="margin-bottom: 0.5rem;">線上商品訂購單</h1>
+        <p class="section-subtitle" style="margin-bottom: 1.8rem;">確認欲購買的商品與付款方式，我們將立即為您備貨出貨。</p>
+
+        <!-- 商品選擇區塊 -->
+        <div class="form-group">
+          <label for="product-select">選擇訂購商品 *</label>
+          <select id="product-select" name="product" required>
+            <option value="" disabled selected>-- 請選擇商品 --</option>
+            <option value="No.1 靜謐深林天賦精油瓶">No.1 靜謐深林天賦精油瓶 (NT$ 880)</option>
+            <option value="No.2 溫暖花園天賦精油瓶">No.2 溫暖花園天賦精油瓶 (NT$ 880)</option>
+            <option value="No.3 晨光日光天賦精油瓶">No.3 晨光日光天賦精油瓶 (NT$ 880)</option>
+            <option value="植萃淨化與能量場噴霧 (100ml)">植萃淨化與能量場噴霧 100ml (NT$ 1,280)</option>
+            <option value="深層沉靜天賦泡澡調理精油 (100ml)">深層沉靜天賦泡澡調理精油 100ml (NT$ 1,080)</option>
+            <option value="專屬天賦生命圖譜高訂香水 (50ml)">專屬天賦生命圖譜高訂香水 50ml (NT$ 2,680)</option>
+          </select>
+        </div>
+
+        <!-- 購買人基本資料 -->
+        <div class="form-group">
+          <label for="user-name">訂購人姓名 *</label>
+          <input type="text" id="user-name" required placeholder="請輸入收件人真實姓名">
+        </div>
+
+        <div class="form-group">
+          <label for="user-phone">聯絡電話 *</label>
+          <input type="tel" id="user-phone" required placeholder="例如：0912345678">
+        </div>
+
+        <div class="form-group">
+          <label for="user-email">電子郵件 *</label>
+          <input type="email" id="user-email" required placeholder="例如：service@botanumeric.com">
+        </div>
+
+        <div class="form-group">
+          <label for="user-address">寄送地址 *</label>
+          <input type="text" id="user-address" required placeholder="請輸入完整收件地址（縣市/鄉鎮市區/門牌）">
+        </div>
+
+        <!-- 付款方式選擇 -->
+        <div class="form-group">
+          <label for="payment-method">付款方式 *</label>
+          <select id="payment-method" required>
+            <option value="credit_card">信用卡線上刷卡 (Visa / Master / JCB)</option>
+            <option value="bank_transfer" selected>ATM 銀行轉帳 / 網路銀行匯款</option>
+            <option value="cod">7-11 / 全家 超商取貨付款</option>
+          </select>
+          
+          <!-- ATM 轉帳專用提示卡 -->
+          <div id="bank-info" class="bank-info-box">
+            📌 <strong>官方匯款帳戶資訊：</strong><br>
+            銀行名稱：玉山銀行 (808) 營業部<br>
+            帳號號碼：9012-345-678901<br>
+            戶名：植數密碼工作室<br>
+            <small style="color: #666;">* 完成轉帳後請於備註欄提供「帳號後五碼」，加速核對流程。</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="user-note">備註事項（選填）</label>
+          <textarea id="user-note" rows="3" placeholder="若訂購高訂香水請寫下您的天賦主數，或填寫指定出貨時段..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">確認送出訂單</button>
+      </form>
+
+      <!-- 2. 送出成功狀態畫面 -->
+      <div id="success-message" class="success-card">
+        <h2>🎉 訂購申請成功送出！</h2>
+        <p>感謝您的支持與訂購，我們已收到您的訂單資訊。</p>
+        
+        <div class="order-summary-box">
+          <p><strong>訂購商品：</strong> <span id="summary-product"></span></p>
+          <p><strong>訂購人：</strong> <span id="summary-name"></span></p>
+          <p><strong>付款方式：</strong> <span id="summary-payment"></span></p>
+          <p><strong>處理狀態：</strong> <span style="color: #27AE60; font-weight: bold;">訂單處理中（1-2 個工作天內出貨）</span></p>
+        </div>
+
+        <p style="color: #666; font-size: 0.95rem;">我們已寄送「訂單確認信」至您的電子信箱，請密切留意您的信箱通知。</p>
+        <a href="products.html" class="btn-primary" style="display: inline-block; margin-top: 1.5rem; text-decoration: none;">返回商品列表</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 植數密碼 Botanumeric. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const productSelect = document.getElementById('product-select');
+      const paymentSelect = document.getElementById('payment-method');
+      const bankInfo = document.getElementById('bank-info');
+      const orderForm = document.getElementById('order-form');
+      const successMessage = document.getElementById('success-message');
+
+      // 1. 自動帶入網址傳遞過來的商品名稱 (URL Parameter)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlProduct = urlParams.get('product');
+
+      if (urlProduct) {
+        const decodedName = decodeURIComponent(urlProduct);
+        // 比對下拉選單中的選項
+        for (let option of productSelect.options) {
+          if (option.value.includes(decodedName) || decodedName.includes(option.value)) {
+            option.selected = true;
+            break;
+          }
+        }
+      }
+
+      // 2. 切換付款方式時，顯示/隱藏銀行匯款資訊
+      function toggleBankInfo() {
+        if (paymentSelect.value === 'bank_transfer') {
+          bankInfo.style.display = 'block';
+        } else {
+          bankInfo.style.display = 'none';
+        }
+      }
+      toggleBankInfo();
+      paymentSelect.addEventListener('change', toggleBankInfo);
+
+      // 3. 表單送出處理
+      orderForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // 填入成功頁面的訂單明細
+        document.getElementById('summary-product').textContent = productSelect.value || "天賦植萃系列商品";
+        document.getElementById('summary-name').textContent = document.getElementById('user-name').value;
+        
+        const paymentText = paymentSelect.options[paymentSelect.selectedIndex].text;
+        document.getElementById('summary-payment').textContent = paymentText;
+
+        // 切換顯示區塊
+        orderForm.style.display = 'none';
+        successMessage.style.display = 'block';
+        
+        // 自動捲動到最頂部
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

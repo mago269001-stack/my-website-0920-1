@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>香氛系列｜植數密碼 Botanumeric</title>
+<!-- 引入整理好的獨立 CSS 檔案 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/gemini-svg (3).svg">
+</head>
+<body>
+
+  <!-- 頁頭與導覽列 -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">植數密碼 Botanumeric</a>
+      <nav>
+        <button class="mobile-nav-toggle" aria-label="開啟選單" aria-expanded="false" id="menu-toggle">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+              <li><a href="index.html">首頁</a></li>
+          <li><a href="quiz.html" class="active">天賦測驗</a></li>
+          <li><a href="curriculum.html">天賦課程</a></li>
+          <li><a href="products.html">香氛系列</a></li>
+          <li><a href="about.html">關於我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1 class="section-title">天賦植萃香氛系列</h1>
+      <p class="section-subtitle">凝聚植物靈氣與天賦數能量，為您的日常空間與心靈注入和諧氛圍。</p>
+
+      <!-- 分類篩選 -->
+      <div class="filter-wrapper">
+        <button type="button" class="filter-btn active" onclick="filterProducts('all')">全部商品</button>
+        <button type="button" class="filter-btn" onclick="filterProducts('essential-oil')">天賦精油滾珠</button>
+        <button type="button" class="filter-btn" onclick="filterProducts('spray')">空間能量噴霧</button>
+        <button type="button" class="filter-btn" onclick="filterProducts('bath')">泡澡調理精油</button>
+        <button type="button" class="filter-btn" onclick="filterProducts('custom')">個人客製調香</button>
+      </div>
+
+      <!-- 商品列表 -->
+      <div class="product-grid" id="product-grid">
+
+        <!-- 商品 1 -->
+        <article class="product-card" data-category="essential-oil">
+          <div class="product-image-box">
+            <span class="product-tag">熱銷推薦</span>
+            <img src="images/istockphoto-1308706899-612x612.jpg" alt="No.1 樹木密碼滾珠精油" onerror="this.style.display='none'">
+          </div>
+          <div class="product-body">
+            <span class="product-number">TALENT NO. 1 / 4 / 7</span>
+            <h2 class="product-title">No.1 靜謐深林天賦精油瓶</h2>
+            <p class="product-notes">香調：大西洋雪松、苦橙葉、乳香</p>
+            <p class="product-description">專為需要專注與定心的理性思考者設計，沉穩的木質香氣能穩固能量，沉澱繁雜思緒。</p>
+            <div class="product-footer">
+              <span class="product-price">NT$ 880</span>
+              <a href="signup.html" class="btn-primary">線上訂購</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 商品 2 -->
+        <article class="product-card" data-category="essential-oil">
+          <div class="product-image-box">
+            <span class="product-tag">經典款</span>
+            <img src="images/pexels-gabby-k-20419194.jpg" alt="No.2 花萃密碼滾珠精油" onerror="this.style.display='none'">
+          </div>
+          <div class="product-body">
+            <span class="product-number">TALENT NO. 2 / 6 / 9</span>
+            <h2 class="product-title">No.2 溫暖花園天賦精油瓶</h2>
+            <p class="product-notes">香調：真實薰衣草、依蘭依蘭、玫瑰天竺葵</p>
+            <p class="product-description">蘊含溫柔陪伴的植物能量，舒緩情緒緊繃與壓力，幫助打開心房、重拾內在和諧。</p>
+            <div class="product-footer">
+              <span class="product-price">NT$ 880</span>
+              <a href="signup.html" class="btn-primary">線上訂購</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 商品 3 -->
+        <article class="product-card" data-category="essential-oil">
+          <div class="product-image-box">
+            <span class="product-tag">活力款</span>
+            <img src="images/pexels-pnw-prod-8490177.jpg" alt="No.3 柑橘密碼滾珠精油" onerror="this.style.display='none'">
+          </div>
+          <div class="product-body">
+            <span class="product-number">TALENT NO. 3 / 5 / 8</span>
+            <h2 class="product-title">No.3 晨光日光天賦精油瓶</h2>
+            <p class="product-notes">香調：佛手柑、甜橙、歐洲赤松</p>
+            <p class="product-description">帶有陽光般明亮愉悅的柑橘氣息，激發創意靈感與熱情，為生活注入充沛活力。</p>
+            <div class="product-footer">
+              <span class="product-price">NT$ 880</span>
+              <a href="signup.html" class="btn-primary">線上訂購</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 商品 4 -->
+        <article class="product-card" data-category="spray">
+          <div class="product-image-box">
+            <span class="product-tag">空間噴霧</span>
+            <img src="images/—Pngtree—herbal essential oils and dropper_20141158.jpg" alt="植萃淨化空間噴霧" onerror="this.style.display='none'">
+          </div>
+          <div class="product-body">
+            <span class="product-number">SPACE AROMA SPRAY</span>
+            <h2 class="product-title">植萃淨化與能量場噴霧 (100ml)</h2>
+            <p class="product-notes">香調：鼠尾草、杜松子、澳洲尤加利</p>
+            <p class="product-description">淨化居家與工作空間殘留的疲憊磁場，營造清新自然、回歸自我的純淨氛圍。</p>
+            <div class="product-footer">
+              <span class="product-price">NT$ 1,280</span>
+              <a href="signup.html" class="btn-primary">線上訂購</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 商品 5：新增泡澡系列 -->
+        <article class="product-card" data-category="bath">
+          <div class="product-image-box">
+            <span class="product-tag">舒緩放鬆</span>
+            <img src="images/泡澡.jpg" alt="深層沉靜泡澡調理精油" onerror="this.style.display='none'">
+          </div>
+          <div class="product-body">
+            <span class="product-number">BATH & EMBRACE OIL</span>
+            <h2 class="product-title">深層沉靜天賦泡澡調理精油 (100ml)</h2>
+            <p class="product-notes">香調：羅馬洋甘菊、岩蘭草、甜橙</p>
+            <p class="product-description">專為釋放全身累積的深層壓力設計，透過溫熱水蒸氣將親膚精油滲透肌膚，享受極致放鬆的身心儀式。</p>
+            <div class="product-footer">
+              <span class="product-price">NT$ 1,080</span>
+              <a href="signup.html" class="btn-primary">線上訂購</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 商品 6 -->
+        <article class="product-card" data-category="custom">
+          <div class="product-image-box">
+            <span class="product-tag">專屬訂製</span>
+            <img src="images/pexels-mart-production-8450233.jpg" alt="個人天賦生命圖譜調香" onerror="this.style.display='none'">
+          </div>
+          <div class="product-body">
+            <span class="product-number">PERSONAL CUSTOM MADE</span>
+            <h2 class="product-title">專屬天賦生命圖譜高訂香水 (50ml)</h2>
+            <p class="product-notes">香調：依個人天賦圖譜與需求全客製調配</p>
+            <p class="product-description">結合個人天賦數解析與獨一無二的氣味印記，專屬調香師一對一諮詢後手工精心調製。</p>
+            <div class="product-footer">
+              <span class="product-price">NT$ 2,680</span>
+              <a href="signup.html" class="btn-primary">預約訂製</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    <div class="container">
+      <p>© 2026 植數密碼 Botanumeric. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // 商品分類篩選功能
+    function filterProducts(category) {
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // 更新按鈕 active 狀態
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // 篩選商品卡片
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  <!-- 放在 </body> 結束標籤上方 -->
+  <script src="js/main.js"></script>
+</body>
+</html>

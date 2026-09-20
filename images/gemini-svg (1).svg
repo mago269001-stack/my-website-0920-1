@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- 外環 -->
+  <circle cx="8" cy="8" r="6" fill="none" stroke="#8E44AD" stroke-width="1.5"/>
+  <!-- 內環 -->
+  <circle cx="8" cy="8" r="3" fill="none" stroke="#9B59B6" stroke-width="1"/>
+  <!-- 核心中心點 -->
+  <circle cx="8" cy="8" r="1" fill="#8E44AD"/>
+</svg>

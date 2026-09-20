@@ -1,0 +1,289 @@
+{
+  "site": {
+    "title": "植數密碼 Botanumeric",
+    "subtitle": "探索天賦數與植物靈氣的和諧共振",
+    "copyright": "© 2026 植數密碼 Botanumeric. All Rights Reserved."
+  },
+ "nav": [
+    { "name": "首頁", "link": "index.html", "id": "home" },
+    { "name": "天賦測驗", "link": "quiz.html", "id": "quiz" },
+    { "name": "植數課程", "link": "curriculum.html", "id": "curriculum" },
+    { "name": "香氛系列", "link": "products.html", "id": "products" },
+    { "name": "常見問題", "link": "index.html#faq", "id": "fqa" },
+    { "name": "關於我們", "link": "about.html", "id": "about" }
+  ],
+  "hero": {
+    "kicker": "BOTANUMERIC",
+    "title": "解開天賦密碼，遇見內在和諧的自己",
+    "subtitle": "結合生命天賦數分析與客製化植萃精油，引導您找到專屬的心靈平衡力量。"
+  },
+  "featuresTitle": "品牌服務特色",
+  "features": [
+    {
+      "imageUrl": "images/MOIL.jpg",
+      "imageAlt": "天賦密碼解析",
+      "title": "✨ 天賦密碼解析",
+      "description": "透過生日數字深度剖析個人的性格特質、天賦潛能與溝通互動模式。"
+    },
+    {
+      "imageUrl": "images/pexels-gabby-k-20419194.jpg",
+      "imageAlt": "植物能量調香",
+      "title": "🌿 植物能量調香",
+      "description": "精選天然植物精油，為不同天賦數能量打造專屬的頻率共振香氛。"
+    },
+    {
+      "imageUrl": "images/pexels-gabby-k-20419200.jpg",
+      "imageAlt": "心理諮詢與課程",
+      "title": "🎓 心理諮詢與的課程",
+      "description": "提供手把手的心理與溝通課程，幫助您在職場與家庭關係中創造和諧。"
+    }
+  ],
+  "faqTitle": "常見問題 FAQ",
+  "faq": [
+    {
+      "question": "什麼是天賦數？要如何計算？",
+      "answer": "天賦數是透過您的西元出生年月日相加計算出的數字密碼，能揭示個人的內在特徵與潛能。"
+    },
+    {
+      "question": "客製化精油該如何選擇與使用？",
+      "answer": "您可以先透過免費線上測驗獲取您的天賦主數，系統將為您推薦最適配的植物精油香調。"
+    }
+    ,
+    {
+      "question": "調配出來的專屬香氛可以使用多久？開封後該如何保存？",
+     "answer": "就像保養品一樣，我們的客製香氛不含強力化學防腐劑。建議在開封後的 **6 個月至 1 年內** 使用完畢，以確保植物精油與香氣的最佳新鮮度與活性。平常請將它放在陰涼乾燥的地方，避免太陽直射或放在溫度變化大的地方（例如浴室），這樣香味才不容易變質喔！"
+    },
+    { 
+    "question": "如果測驗出來的天賦香氛味道我不太喜歡，可以調整嗎？",
+     "answer": "沒問題的！「植數密碼」的測驗結果是依據您的天賦特質給予的專業香氛建議，但每個人對味道的感受和主觀偏好都不同。如果您對其中的某些植物調性比較敏感或排斥，我們在後續的調配或訂製流程中，都可以根據您的喜好進行微調，幫您找出最舒服、最適合自己的專屬氣味。"
+}
+  ],
+  "contact": {
+    "title": "尋找您的專屬植萃解答？",
+    "description": "如有任何課程預約或客製香氛調配需求，歡迎隨時透過 Email 與我們聯繫。"
+  },
+  "footer": "© 2026 植數密碼 Botanumeric. All Rights Reserved.",
+  "homePage": {
+    "hero": {
+      "title": "解開天賦密碼，遇見內在和諧的自己",
+      "subtitle": "結合生命天賦數分析與客製化植萃精油，引導您找到專屬的心靈平衡力量。",
+      "primaryBtnText": "開始天賦測驗",
+      "primaryBtnLink": "quiz.html",
+      "secondaryBtnText": "探索香氛系列",
+      "secondaryBtnLink": "products.html"
+    },
+    "features": [
+      {
+        "icon": "✨",
+        "title": "天賦密碼解析",
+        "description": "透過生日數字深度剖析個人的性格特質、天賦潛能與溝通互動模式。"
+      },
+      {
+        "icon": "🌿",
+        "title": "植物能量調香",
+        "description": "精選天然植物精油，為不同天賦數能量打造專屬的頻率共振香氛。"
+      },
+      {
+        "icon": "🎓",
+        "title": "心理諮詢與課程",
+        "description": "提供手把手的心理與溝通課程，幫助您在職場與家庭關係中創造和諧。"
+      }
+    ]
+  },
+  "quizPage": {
+    "title": "直覺植物天賦測驗",
+    "subtitle": "靜下心來，憑直覺選擇最符合您當下狀態的選項，尋心找您內在的特質與專屬香氣。",
+    "questions": [
+      {
+        "question": "當結束忙碌的一天回到家，您最希望透過什麼樣的方式讓自己放鬆？",
+        "options": [
+          { "text": "獨自沉浸在安靜的空間閱讀、聽音樂或思考", "type": "A" },
+          { "text": "與家人朋友聊天交流，分享今天發生的點滴", "type": "B" },
+          { "text": "規劃接下來的行程，整理居家環境與清單", "type": "C" },
+          { "text": "嘗試手作、畫畫或尋找新的靈感與興趣", "type": "D" }
+        ]
+      },
+      {
+        "question": "在團隊合作或社交場合中，您通常扮演什麼樣的角色？",
+        "options": [
+          { "text": "冷靜觀察者，提供深度的建議與策略", "type": "A" },
+          { "text": "溫暖協調者，關心大家的感受與氛圍", "type": "B" },
+          { "text": "可靠執行者，確保事情條理分明且有效率", "type": "C" },
+          { "text": "創意發想者，跳脫框架帶領新的可能性", "type": "D" }
+        ]
+      },
+      {
+        "question": "當面臨突發狀況或挑戰時，您的第一反應傾向於？",
+        "options": [
+          { "text": "退後一步思考問題根源，冷靜分析現狀", "type": "A" },
+          { "text": "尋求信任夥伴的溝通與支持，共同面對", "type": "B" },
+          { "text": "快速制定步驟計劃，著手一步步解決問題", "type": "C" },
+          { "text": "靈活應變，嘗試不尋常的創新解決方式", "type": "D" }
+        ]
+      },
+      {
+        "question": "您最渴望在大自然中獲得什麼樣的能量狀態？",
+        "options": [
+          { "text": "深林般的平靜沉穩，讓思緒獲得釐清", "type": "A" },
+          { "text": "花園般的溫暖包容，充滿和諧與愛意", "type": "B" },
+          { "text": "大地般的堅實有序，給予安全感與穩定", "type": "C" },
+          { "text": "晨露般的清新活力，帶來無窮創意與靈感", "type": "D" }
+        ]
+      }
+    ]
+  },
+ "curriculumPage": {
+    "title": "天賦數與身心靈調香課程",
+    "subtitle": "透過天賦密碼解讀個人特質，結合植物芳香療法，探索內在平衡與和諧。",
+    "courses": [
+      {
+        "id": "c1",
+        "title": "天賦數與專屬精油入門體驗",
+        "tag": "入門體驗工作坊",
+        "description": "學習天賦數基礎計算，探索自身核心人格與專屬植物香氣，親手調配一瓶屬於自己的天賦精油滾珠瓶。",
+        "price": "NT$ 1,800",
+        "btnText": "預約報名",
+        "btnLink": "https://forms.gle/eKpX6zHSj4eyZYz29"
+      },
+      {
+        "id": "c2",
+        "title": "天賦數字解析與情緒芳療實務",
+        "tag": "進階深度班",
+        "description": "深入解析天賦數連線與情緒流動，結合精油調香技巧與九大植物香氣系統，提升直覺力與內在修復力。",
+        "price": "NT$ 4,500",
+        "btnText": "預約報名",
+        "btnLink": "https://forms.gle/PoYSD86oq3u7C2dP9"
+      },
+      {
+        "id": "c3",
+        "title": "1 對 1 天賦數調香深度諮詢",
+        "tag": "一對一專屬諮詢",
+        "description": "包含 60 分鐘專業生命天賦圖譜解析，並由調香師根據您的現狀，全客製化調配 30ml 專屬植物能量香水。",
+        "price": "NT$ 3,200",
+        "btnText": "立即預約",
+        "btnLink": "https://forms.gle/aspNuYXzr67gPtDu5"
+      }
+    ]
+   },
+  "productsPage": {
+    "title": "天賦植萃香氛系列",
+    "subtitle": "凝聚植物靈氣與天賦數能量，為您的日常空間與心靈注入和諧氛圍。",
+    "categories": [
+      { "key": "all", "name": "全部商品" },
+      { "key": "essential-oil", "name": "天賦精油滾珠" },
+      { "key": "spray", "name": "空間能量噴霧" },
+      { "key": "bath", "name": "泡澡調理精油" },
+      { "key": "custom", "name": "個人客製調香" }
+    ],
+    "items": [
+      {
+        "id": "p1",
+        "category": "essential-oil",
+        "tag": "熱銷推薦",
+        "image": "images/istockphoto-1308706899-612x612.jpg",
+        "number": "TALENT NO. 1 / 4 / 7",
+        "title": "No.1 靜謐深林天賦精油瓶",
+        "notes": "香調：大西洋雪松、苦橙葉、乳香",
+        "description": "專為需要專注與定心的理性思考者設計，沉穩的木質香氣能穩固能量，沉澱繁雜思緒。",
+        "price": "NT$ 880",
+        "btnText": "線上訂購"
+      },
+      {
+        "id": "p2",
+        "category": "essential-oil",
+        "tag": "經典款",
+        "image": "images/pexels-gabby-k-20419194.jpg",
+        "number": "TALENT NO. 2 / 6 / 9",
+        "title": "No.2 溫暖花園天賦精油瓶",
+        "notes": "香調：真實薰衣草、依蘭依蘭、玫瑰天竺葵",
+        "description": "蘊含溫柔陪伴的植物能量，舒緩情緒緊繃與壓力，幫助打開心房、重拾內在和諧。",
+        "price": "NT$ 880",
+        "btnText": "線上訂購"
+      },
+      {
+        "id": "p3",
+        "category": "essential-oil",
+        "tag": "靈感推薦",
+        "image": "images/pngtree-small-bottle-of-mallow-herbal-tincture-essential-oil-extract-for-natural-image_16408738.jpg",
+        "number": "TALENT NO. 3 / 5 / 8",
+        "title": "No.3 晨光日光天賦精油瓶",
+        "notes": "香調：甜橙、佛手柑、檸檬草",
+        "description": "充滿活力與創造力的果香調，能點亮沉悶心境，激發內在熱情與靈感思維。",
+        "price": "NT$ 880",
+        "btnText": "線上訂購"
+      },
+      {
+        "id": "p4",
+        "category": "spray",
+        "tag": "空間必備",
+        "image": "images/—Pngtree—herbal aromatherapy essential oil bottle_20447455.jpg",
+        "number": "AURA CLEANSE SPRAY",
+        "title": "植萃淨化與能量場噴霧 (100ml)",
+        "notes": "香調：白色鼠尾草、杜松子、波旁天竺葵",
+        "description": "淨化環境與個人氣場，去除負面沉悶氣息，為居家或工作空間帶來清爽自然的防護罩。",
+        "price": "NT$ 1,280",
+        "btnText": "線上訂購"
+      },
+      {
+        "id": "p5",
+        "category": "bath",
+        "tag": "舒緩放鬆",
+        "image": "images/泡澡.jpg",
+        "number": "BATH & EMBRACE OIL",
+        "title": "深層沉靜天賦泡澡調理精油 (100ml)",
+        "notes": "香調：羅馬洋甘菊、岩蘭草、甜橙",
+        "description": "專為釋放全身累積的深層壓力設計，透過溫熱水蒸氣將親膚精油滲透肌膚，享受極致放鬆的身心儀式。",
+        "price": "NT$ 1,080",
+        "btnText": "線上訂購"
+      },
+      {
+        "id": "p6",
+        "category": "custom",
+        "tag": "專屬訂製",
+        "image": "images/—Pngtree—herbal essential oils and dropper_20141158.jpg",
+        "number": "HIGH CUSTOM PERFUME",
+        "title": "專屬天賦生命圖譜高訂香水 (50ml)",
+        "notes": "香調：依據個人天賦生命圖譜獨家量身調配",
+        "description": "結合天賦數深度解析與調香師專業對談，打造全球獨一無二、專屬於您生命能量頻率的高訂香氛。",
+        "price": "NT$ 2,680",
+        "btnText": "預約訂製"
+      }
+    ]
+  },
+  "aboutPage": {
+    "title": "關於 植數密碼 Botanumeric",
+    "subtitle": "用白話文解析天賦，用植物力量療癒日常",
+    "storyTitle": "探索天賦與植物能量的交會點",
+    "story": [
+      "「植數密碼」結合了天賦數數字心理學與植物精油靈氣療癒。",
+      "我們相信每個人出生時都帶有一組獨一無二的性格地圖，而大自然的植物能量則是最溫柔的頻率調節師。",
+      "透過簡單易懂的白話解析與手把手引導，我們幫助您釐清人際溝通盲點、認識真實自我，並找到最適合自己的心靈調和法則。"
+    ],
+    "contact": {
+      "email": "service@botanumeric.com",
+      "line": "@botanumeric",
+      "address": "台灣台北市大安區香氛文創園區 8 號"
+    }
+  },
+  "orderPage": {
+    "title": "線上商品訂購單",
+    "subtitle": "確認欲購買的商品與付款方式，我們將立即為您備貨出貨。",
+    "paymentOptions": [
+      { "value": "credit_card", "label": "信用卡線上刷卡 (Visa / Master / JCB)" },
+      { "value": "bank_transfer", "label": "ATM 銀行轉帳 / 網路銀行匯款" },
+      { "value": "cod", "label": "7-11 / 全家 超商取貨付款" }
+    ],
+    "bankInfo": {
+      "bankName": "玉山銀行 (808) 營業部",
+      "accountNumber": "9012-345-678901",
+      "accountName": "植數密碼工作室",
+      "note": "* 完成轉帳後請於備註欄提供「帳號後五碼」，加速核對流程。"
+    },
+    "successMessage": {
+      "title": "🎉 訂購申請成功送出！",
+      "description": "感謝您的支持與訂購，我們已收到您的訂單資訊。",
+      "statusText": "訂單處理中（1-2 個工作天內出貨）",
+      "emailNotice": "我們已寄送「訂單確認信」至您的電子信箱，請密切留意您的信箱通知。"
+    }
+  }
+}

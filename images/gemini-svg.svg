@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <!-- 瓶蓋 -->
+  <rect x="6.5" y="2" width="3" height="2" fill="#34495E"/>
+  <!-- 瓶身 -->
+  <path d="M5 4 C5 3.5 11 3.5 11 4 L12 13 C12 14.5 10 15 8 15 C6 15 4 14.5 4 13 Z" fill="none" stroke="#34495E" stroke-width="1.5"/>
+  <!-- 瓶身上的小葉子裝飾 -->
+  <path d="M8 11 C7 10 6 8.5 7 7 C8 8.5 9 10 8 11 Z" fill="#16A085"/>
+</svg>

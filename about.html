@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於我們｜植數密碼 Botanumeric</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/gemini-svg.svg">
+  <style>
+    /* 冰山理論與情緒平衡專用風格 */
+    .iceberg-section {
+      background: linear-gradient(180deg, #ffffff 0%, #f4f9f5 100%);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      margin: 3rem 0;
+      border: 1px solid rgba(39, 174, 96, 0.15);
+    }
+    .iceberg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .iceberg-card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      border-top: 4px solid #27AE60;
+    }
+    .iceberg-card.low {
+      border-top-color: #e74c3c;
+    }
+    .iceberg-card.balance {
+      border-top-color: #f39c12;
+    }
+    .iceberg-card h3 {
+      color: #2C3E50;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .number-badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .num-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: transform 0.2s ease;
+    }
+    .num-card:hover {
+      transform: translateY(-3px);
+      border-color: #27AE60;
+    }
+    .num-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .num-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #27AE60;
+    }
+    .num-scent {
+      font-size: 0.85rem;
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 頁頭與導覽列 -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">植數密碼 Botanumeric</a>
+      <nav>
+        <button class="mobile-nav-toggle" aria-label="開啟選單" aria-expanded="false" id="menu-toggle">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="quiz.html">天賦測驗</a></li>
+          <li><a href="curriculum.html">天賦課程</a></li>
+          <li><a href="products.html">香氛系列</a></li>
+          <li><a href="about.html" class="active">關於我們</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1 class="section-title" data-json="aboutPage.title">關於 植數密碼 Botanumeric</h1>
+      <p class="section-subtitle" data-json="aboutPage.subtitle">用白話文解析天賦，用植物力量療癒日常</p>
+
+      <!-- 品牌故事卡片 -->
+      <article class="story-card">
+        <h2 class="story-title" data-json="aboutPage.storyTitle">探索天賦與植物能量的交會點</h2>
+        <div id="story-container"></div>
+      </article>
+
+      <!-- 新增：冰山理論與情緒解析 -->
+      <section class="iceberg-section">
+        <h2 class="section-title" style="margin-bottom:0.5rem;">冰山理論：解開情緒背後的天賦密碼</h2>
+        <p class="section-subtitle">我們的外在情緒只是冰山一角，水面之下隱藏著未被滿足的天賦需求</p>
+
+        <div class="iceberg-grid">
+          <div class="iceberg-card">
+            <h3>🏔️ 冰山之上（行為與外在）</h3>
+            <p>當我們處於壓力或焦慮時，展現出來的怒氣、冷漠、討好或控制，都只是冰山暴露在水面上的外在行為標籤。</p>
+          </div>
+          <div class="iceberg-card low">
+            <h3>🌊 水面之下（低能量情緒）</h3>
+            <p>低能量情緒源自天賦天性受到壓抑或失衡。當渴望沒被看見，內在便會以失控或退縮的情緒表達抗議。</p>
+          </div>
+          <div class="iceberg-card balance">
+            <h3>🌿 植物芳香的調和力量</h3>
+            <p>香氣分子透過嗅覺直達大腦邊緣系統，快速撫平波動的情緒，喚醒天賦高能量，協助冰山上下達到平衡。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 新增：天賦數字與精油平衡指南 -->
+      <h2 class="section-title">天賦數字 1–9 與精油平衡運用</h2>
+      <p class="section-subtitle">認識您的高低能量轉化，找到專屬植物支持力</p>
+
+      <div class="number-badge-grid">
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 1 ｜ 獨立開創</span>
+            <span class="num-scent">歐洲赤松</span>
+          </div>
+          <p><strong>高能量：</strong> 自信獨立、具領導力</p>
+          <p><strong>低能量：</strong> 孤立焦慮、害怕被否定</p>
+          <p><small>💡 精油支持：赤松木質香氣帶給您扎實的挺立感。</small></p>
+        </div>
+
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 2 ｜ 溫柔協調</span>
+            <span class="num-scent">羅馬洋甘菊</span>
+          </div>
+          <p><strong>高能量：</strong> 善於共情、和諧包容</p>
+          <p><strong>低能量：</strong> 委屈討好、缺乏安全感</p>
+          <p><small>💡 精油支持：洋甘菊撫平委屈，給予溫柔安撫。</small></p>
+        </div>
+
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 3 ｜ 創意表達</span>
+            <span class="num-scent">甜橙</span>
+          </div>
+          <p><strong>高能量：</strong> 熱情陽光、充滿靈感</p>
+          <p><strong>低能量：</strong> 躁動不安、情緒起伏大</p>
+          <p><small>💡 精油支持：甜橙帶來明亮愉悅，安定躁動心靈。</small></p>
+        </div>
+
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 4 ｜ 踏實秩序</span>
+            <span class="num-scent">岩蘭草</span>
+          </div>
+          <p><strong>高能量：</strong> 務實穩定、條理分明</p>
+          <p><strong>低能量：</strong> 頑固過慮、抗拒改變</p>
+          <p><small>💡 精油支持：岩蘭草深沉接地，解開緊張與固執。</small></p>
+        </div>
+
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 5 ｜ 自由冒險</span>
+            <span class="num-scent">苦橙葉</span>
+          </div>
+          <p><strong>高能量：</strong> 靈活勇敢、隨遇而安</p>
+          <p><strong>低能量：</strong> 逃避責任、浮躁不安</p>
+          <p><small>💡 精油支持：苦橙葉平衡神經系統，重拾專注。</small></p>
+        </div>
+
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 6 ｜ 關懷包容</span>
+            <span class="num-scent">玫瑰天竺葵</span>
+          </div>
+          <p><strong>高能量：</strong> 責任感強、溫暖付出</p>
+          <p><strong>低能量：</strong> 過度掌控、自怨自艾</p>
+          <p><small>💡 精油支持：天竺葵調和付出與接收的愛。</small></p>
+        </div>
+
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 7 ｜ 智慧探究</span>
+            <span class="num-scent">乳香</span>
+          </div>
+          <p><strong>高能量：</strong> 理性深邃、直覺敏銳</p>
+          <p><strong>低能量：</strong> 多疑冷漠、孤立自我</p>
+          <p><small>💡 精油支持：乳香帶來沉靜冥想，開啟靈性智慧。</small></p>
+        </div>
+
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 8 ｜ 豐盛力量</span>
+            <span class="num-scent">杜松子</span>
+          </div>
+          <p><strong>高能量：</strong> 目標明確、具展現力</p>
+          <p><strong>低能量：</strong> 控制欲強、焦慮失敗</p>
+          <p><small>💡 精油支持：杜松子淨化負面壓力，重獲自信。</small></p>
+        </div>
+
+        <div class="num-card">
+          <div class="num-header">
+            <span class="num-title">數字 9 ｜ 慈悲圓滿</span>
+            <span class="num-scent">鼠尾草</span>
+          </div>
+          <p><strong>高能量：</strong> 開放包容、大愛圓滿</p>
+          <p><strong>低能量：</strong> 迷惘無力、逃避現實</p>
+          <p><small>💡 精油支持：鼠尾草帶來清明視野與圓滿歸屬。</small></p>
+        </div>
+      </div>
+
+      <!-- 核心理念 -->
+      <h2 class="section-title" style="margin-top: 3rem;">核心價值</h2>
+      <p class="section-subtitle">我們堅持的三個內在承諾</p>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">✦</div>
+          <h3 class="value-title">深層自我理解</h3>
+          <p class="value-desc">透過邏輯清晰的天賦數分析，協助您認識自己的獨特優勢，解開人際與職涯的盲點。</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">❀</div>
+          <h3 class="value-title">天然植物療癒</h3>
+          <p class="value-desc">嚴選天然純淨植物精油，讓自然氣息成為日常隨身的能量後盾，撫平情緒與壓力。</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">✧</div>
+          <h3 class="value-title">溫暖和諧陪伴</h3>
+          <p class="value-desc">以溫柔、不設限的方式提供引導與課程，陪伴您踏上回歸自我、實現內在價值的旅程。</p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h3 class="cta-title">準備好開啟您的天賦探索之旅了嗎？</h3>
+        <p class="cta-text">透過簡易的直覺測驗，找出屬於您的專屬天賦數字、情緒冰山特質與推薦產品。</p>
+        <a href="quiz.html" class="btn-primary">開始天賦測驗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 植數密碼 Botanumeric. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

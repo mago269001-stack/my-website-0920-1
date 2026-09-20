@@ -1,0 +1,1021 @@
+/* ==========================================================================
+   植數密碼 Botanumeric - 全站通用樣式檔 (css/style.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. 全域變數與基礎設定 (Global Variables & Reset)
+   -------------------------------------------------------------------------- */
+:root {
+  --bg-color: #FAF8F5;          /* 頁面主要背景色 (暖沙白) */
+  --card-bg: rgba(255, 255, 255, 0.88); /* 卡片半透明背景 (搭配毛玻璃效果) */
+  --primary-color: #2D4A3E;     /* 主色調：深植萃綠 */
+  --secondary-color: #A36B73;   /* 次要色：柔粉花萃色 */
+  --accent-color: #D89A63;      /* 強調色：暖陽金屬色 */
+  --text-main: #242E28;         /* 主要文字顏色 */
+  --text-muted: #5C665F;        /* 次要文字顏色 */
+  --border-color: #E2E8E0;      /* 邊框顏色 */
+  --max-width: 1100px;          /* 內容最大寬度 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  /* 防止文字不自然斷詞與連字號 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   2. 導覽列樣式 (Navigation Header)
+   -------------------------------------------------------------------------- */
+header {
+  background-color: rgba(250, 248, 245, 0.85);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   3. 共用區塊與按鈕樣式 (Reusable Components & Layout)
+   -------------------------------------------------------------------------- */
+section {
+  padding: 4.5rem 1.5rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  font-size: 0.98rem;
+}
+
+/* 主要按鈕 (填色) */
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #2D4A3E 0%, #3B5E50 100%);
+  color: #FFFFFF;
+  padding: 0.85rem 2rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 15px rgba(45, 74, 62, 0.15);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 74, 62, 0.25);
+}
+
+/* 次要按鈕 (外框) */
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--primary-color);
+  padding: 0.85rem 2rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(45, 74, 62, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+   4. 首頁頁面專屬樣式 (index.html)
+   -------------------------------------------------------------------------- */
+.hero {
+  padding: 7.5rem 1.5rem 6.5rem;
+  text-align: center;
+  position: relative;
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(255, 238, 210, 0.7) 0%, transparent 45%),
+    radial-gradient(circle at 10% 85%, rgba(220, 237, 222, 0.8) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(248, 228, 233, 0.5) 0%, transparent 60%),
+    linear-gradient(135deg, #EFF5ED 0%, #FAF8F5 100%);
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 750px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-kicker {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  letter-spacing: 0.18em;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(45, 74, 62, 0.03);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(45, 74, 62, 0.08);
+}
+
+.feature-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.feature-body {
+  padding: 1.8rem;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.faq-section {
+  background: linear-gradient(180deg, #FAF8F5 0%, #F3F7F2 100%);
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.faq-header {
+  width: 100%;
+  padding: 1.5rem 1.8rem;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background-color: rgba(253, 252, 250, 0.8);
+}
+
+.faq-body {
+  padding: 0 1.8rem 1.5rem 1.8rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.faq-item.active .faq-content {
+  max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: radial-gradient(circle at 10% 10%, rgba(255, 245, 235, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%);
+  padding: 3.8rem 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.contact-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. 關於我們頁面樣式 (about.html)
+   -------------------------------------------------------------------------- */
+.story-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 3rem 2.5rem;
+  box-shadow: 0 4px 20px rgba(45, 74, 62, 0.03);
+  margin-bottom: 4rem;
+  line-height: 1.9;
+}
+
+.story-title {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.story-text {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.value-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 2.2rem 1.8rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(45, 74, 62, 0.03);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(45, 74, 62, 0.08);
+}
+
+.value-icon {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.value-title {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.value-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.cta-box {
+  text-align: center;
+  background-color: #E8EFEA;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.cta-title {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.cta-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. 天賦課程頁面樣式 (curriculum.html)
+   -------------------------------------------------------------------------- */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* 找到 .course-card (約在第 290 行) */
+.course-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 2.2rem 1.8rem; /* 👈 將原本的 2.2rem 縮小左右邊距到 1.8rem */
+  box-shadow: 0 4px 20px rgba(45, 74, 62, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.course-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+/* 找到 .course-title 並更新為以下內容 */
+/* 找到 .course-title 並替換為以下設定 */
+.course-title {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  
+  /* ---- 【優化】防止中文孤字與文字斷行對稱 ---- */
+  word-break: break-all;      /* 允許在適當位置斷行 */
+  text-wrap: balance;        /* 自動平衡每列字數，防止最後一行單字掉落 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* 限制最多兩行，保持三張卡片標題高度一致 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* 找到 .course-desc 並替換為以下設定 */
+.course-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+
+  /* ---- 【優化】內文自動避開孤字與提升對稱感 ---- */
+  text-wrap: pretty;         /* CSS 新標準：自動避免段落最後一行出現孤字 */
+  word-break: break-all;
+}
+.course-footer {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* --------------------------------------------------------------------------
+   7. 香氛系列商品頁面樣式 (products.html)
+   -------------------------------------------------------------------------- */
+.filter-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.5rem 1.4rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  border-color: var(--primary-color);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(45, 74, 62, 0.03);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(45, 74, 62, 0.08);
+}
+
+.product-image-box {
+  width: 100%;
+  height: 240px;
+  background-color: #EFECE6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.product-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(250, 248, 245, 0.9);
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.product-body {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-number {
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.product-notes {
+  font-size: 0.88rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+.product-description {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.product-footer {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* --------------------------------------------------------------------------
+   8. 天賦測驗頁面樣式 (quiz.html)
+   -------------------------------------------------------------------------- */
+.quiz-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(45, 74, 62, 0.03);
+}
+
+.progress-bar-wrapper {
+  width: 100%;
+  height: 6px;
+  background-color: var(--border-color);
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.question-step {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.question-title {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 1.8rem;
+  font-weight: 600;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.option-btn {
+  width: 100%;
+  text-align: left;
+  padding: 1.1rem 1.4rem;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  line-height: 1.6;
+}
+
+.option-btn:hover {
+  border-color: var(--primary-color);
+  background-color: #F4F7F4;
+  transform: translateX(4px);
+}
+
+.option-btn.selected {
+  background-color: #E8EFEA;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* 測驗結果區塊 */
+.result-container {
+  display: none;
+  text-align: center;
+}
+
+.result-badge {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.result-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+}
+
+.result-scent {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.result-desc {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  text-align: left;
+  background-color: #FFFFFF;
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.result-actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   9. 頁尾樣式 (Footer)
+   -------------------------------------------------------------------------- */
+footer {
+  background-color: var(--primary-color);
+  color: #E2ECE5;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. 響應式微調 (Responsive RWD)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero-title { font-size: 1.9rem; }
+  .nav-links { gap: 1rem; }
+  section { padding: 3.5rem 1rem; }
+  .story-card { padding: 2rem 1.5rem; }
+  .quiz-card { padding: 1.5rem; }
+  .result-title { font-size: 1.6rem; }
+}
+/* --------------------------------------------------
+   共用導覽列與漢堡選單樣式 (Navbar & Mobile Menu)
+   -------------------------------------------------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+header.scrolled {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: var(--primary-color, #2C3E50);
+  transition: background-color 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color, #2C3E50);
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after { top: 7px; }
+
+.mobile-nav-toggle.active .hamburger {
+  background-color: transparent;
+}
+
+.mobile-nav-toggle.active .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.mobile-nav-toggle.active .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 1.2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    display: none;
+    border-bottom: 1px solid var(--border-color, #e5e5e5);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+}
+
+    /* --------------------------------------------------
+       手機版漢堡選單專用 CSS 樣式
+       -------------------------------------------------- */
+    .mobile-nav-toggle {
+      display: none; /* 桌機版預設隱藏按鈕 */
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1001;
+    }
+
+    .hamburger {
+      display: block;
+      position: relative;
+      width: 24px;
+      height: 2px;
+      background-color: var(--primary-color, #2C3E50);
+      transition: background-color 0.3s ease;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-color, #2C3E50);
+      transition: transform 0.3s ease, top 0.3s ease;
+    }
+
+    .hamburger::before { top: -7px; }
+    .hamburger::after { top: 7px; }
+
+    /* 漢堡按鈕展開時的 ✕ 圖示動畫 */
+    .mobile-nav-toggle.active .hamburger {
+      background-color: transparent;
+    }
+
+    .mobile-nav-toggle.active .hamburger::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    .mobile-nav-toggle.active .hamburger::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    /* 手機版響應式斷點 (768px 以下) */
+    @media (max-width: 768px) {
+      .mobile-nav-toggle {
+        display: block; /* 手機版顯示漢堡按鈕 */
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+        gap: 1.2rem;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        display: none; /* 預設收合 */
+        border-bottom: 1px solid var(--border-color, #e5e5e5);
+      }
+
+      .nav-links.active {
+        display: flex; /* 點擊後展開選單 */
+      }
+
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+      }
+/* FAQ 手風琴展開樣式 */
+.faq-section {
+  padding: 4rem 0;
+  background-color: #f9fbf9;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.faq-header {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+  color: #27ae60;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  background-color: #fafafa;
+}
+
+.faq-body {
+  padding: 0 1.5rem 1.25rem;
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+/* 展開狀態 */
+.faq-item.active .faq-content {
+  max-height: 1000px; /* 允許展開的最大高度 */
+  transition: max-height 0.5s ease-in-out;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* 將 + 轉為 x 表示可關閉 */
+}
+      .nav-links a {
+        display: block;
+        padding: 0.5rem 0;
+      }
+    }
